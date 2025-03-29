@@ -1,0 +1,151 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}My Site{% endblock %}</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'main/css/styles.css' %}" />
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token }}" />
+    <!-- contact stylesheet -->
+    <link rel="stylesheet" href="{%static 'main/css/contact.css' %}" />
+    <!-- about us stylesheet -->
+    <link rel="stylesheet" href="{% static 'main/css/about.css' %}" />
+    <base href="{{ request.scheme }}://{{ request.get_host }}/" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand d-flex align-items-center" href="{% url 'home' %}">
+        <img
+          src="{% static 'main/images/logo.png' %}"
+          alt="Logo"
+          class="navbar-logo" />
+      </a>
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link {% if request.path == '/' %}active{% endif %}"
+                href="{% url 'home' %}">
+                <i class="fas fa-home me-1"></i>Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link {% if 'about' in request.path %}active{% endif %}"
+                href="{% url 'about' %}">
+                <i class="fas fa-info-circle me-1"></i>About
+              </a>
+            </li>
+
+            <!-- Dropdown Menu -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="fas fa-list me-1"></i>Visualisations
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="./graphs/graph1/">Graph 1</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./graphs/graph2/">Graph 2</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./graphs/graph3/">Graph 3</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./graphs/graph4/">Graph 4</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./graphs/graph5/">Graph 5</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./graphs/graph6/">Graph 6</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./graphs/graph7/">Graph 7</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./graphs/graph8/">Graph 8</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./graphs/graph9/">Graph 9</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link {% if 'contact' in request.path %}active{% endif %}"
+                href="{% url 'contact' %}">
+                <i class="fas fa-envelope me-1"></i>Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- chat widget -->
+    <div class="chat-widget" id="chatWidget">
+      <button class="chat-toggle-btn" id="chatToggleBtn">
+        <i class="fas fa-comments"></i>
+      </button>
+      <div class="chat-container" id="chatContainer">
+        <div class="chat-header">
+          <div class="chat-title">
+            <i class="fas fa-robot"></i>
+            <span>AI Assistant</span>
+          </div>
+          <button class="chat-close-btn" id="chatCloseBtn">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="chat-body">
+          <div class="chat-messages" id="chatMessages">
+            <div class="chat-message bot">
+              <div class="message-content">
+                <p>Hello! I'm your AI assistant. How can I help you today?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="chat-footer">
+          <form id="chatForm" class="chat-form">
+            <input
+              type="text"
+              id="messageInput"
+              placeholder="Type your message..."
+              autocomplete="off" />
+            <button type="submit">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- space for graph, insights and related info -->
+    {%block graph%} {%endblock%}
+
+    <script src="https://cdn.jsdelivr.net/npm/@google/generative-ai@0.2.0/dist/web.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'main/js/carousel.js' %}"></script>
+    <script src="{% static 'main/js/chat.js' %}"></script>
+  </body>
+</html>
