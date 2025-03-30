@@ -46,10 +46,7 @@
           <div class="col-lg-6">
             <div class="video-container">
               <div class="video-wrapper">
-                <video autoplay loop muted playsinline class="feature-video">
-                  <source
-                    src="{% static 'main/video/video.mp4' %}"
-                    type="video/mp4" />
+                  <iframe class="feature-video" width="560" height="315" src="https://www.youtube.com/embed/A7NuxpLg1OQ?si=fglzf3ffMzA8VCk6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                   Your browser does not support the video tag.
                 </video>
                 <div class="video-overlay"></div>
@@ -168,15 +165,20 @@
   </div>
   {% block graph %}
   <div
-    class="flourish-embed flourish-hierarchy"
-    data-src="visualisation/22290295">
-    <script src="https://public.flourish.studio/resources/embed.js"></script>
-    <noscript
-      ><img
-        src="https://public.flourish.studio/visualisation/22290295/thumbnail"
-        width="100%"
-        alt="hierarchy visualization"
-    /></noscript>
+    class="flourish-embed flourish-hierarchy" style="display: flex;width: 100%;background-color: aquamarine;border-radius: 10px;margin-bottom: 100px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);">
+      <img src="../../static/main/images/indian_rs.png" alt="money_image" style="width: 50% ; padding: 10px; height: 100%;vertical-align: middle;">
+      <div class="info" style="width: 50%;padding: 10px;display: flex;flex-direction: column;line-height: max-content;align-items: left;justify-content: center;">
+        <h3 class="head">Average Monthly Per Capita Consumption Expenditure (MPCE) by; </h3>
+        <p>✓ State/UT and All-India; </p>
+        <p>✓ Fractile classes of MPCE; </p>
+        <p>✓ Item category of consumption; </p>
+        <p>✓ Household Type; </p>
+        <p>✓ Social Group </p>
+        <h3 class="head">Average Monthly Per Capita Quantity Consumption of selected items for; </h3>
+        <p>✓ State/UT and All-India; </p>
+        <p>✓ Fractile classes of MPCE; </p>
+        <p>✓ Item category.</p>
+      </div>
   </div>
 </div>
 {% endblock %} {% endblock %}
