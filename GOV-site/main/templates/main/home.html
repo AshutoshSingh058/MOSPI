@@ -46,7 +46,7 @@
           <div class="col-lg-6">
             <div class="video-container">
               <div class="video-wrapper">
-                  <iframe class="feature-video" width="560" height="315" src="https://www.youtube.com/embed/A7NuxpLg1OQ?si=fglzf3ffMzA8VCk6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <iframe class="feature-video" width="560" height="315" src="https://www.youtube.com/embed/A7NuxpLg1OQ?si=fglzf3ffMzA8VCk6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen ></iframe>
                   Your browser does not support the video tag.
                 </video>
                 <div class="video-overlay"></div>
@@ -90,7 +90,7 @@
               <i class="fas fa-users fa-3x counter-icon"></i>
             </div>
             <h3 class="counter" data-target="8723">0</h3>
-            <p class="counter-label">Villagers Impacted</p>
+            <p class="counter-label">Villages</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3 mb-4">
@@ -107,79 +107,40 @@
             <div class="counter-icon-wrapper mb-3">
               <i class="fas fa-handshake fa-3x counter-icon"></i>
             </div>
-            <h3 class="counter" data-target="1250">0</h3>
-            <p class="counter-label">Community Partners</p>
+            <h3 class="counter" data-target="6115">0</h3>
+            <p class="counter-label">Blocks</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3 mb-4">
           <div class="counter-box">
             <div class="counter-icon-wrapper mb-3">
-              <i class="fas fa-chart-line fa-3x counter-icon"></i>
+              <i class="fas fa-home fa-3x counter-icon"></i>
             </div>
-            <h3 class="counter" data-target="92">0</h3>
-            <p class="counter-label">Active Projects</p>
+            <h3 class="counter" data-target="106732">0</h3>
+            <p class="counter-label">Urban Households</p>
           </div>
         </div>
-      </div>
-
-      <!-- Features Section -->
-      <div class="row features-section mt-5">
-        <div class="col-md-4 mb-4">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="fas fa-seedling"></i>
-            </div>
-            <h4>Sustainable Development</h4>
-            <p>
-              Creating long-term solutions that respect both communities and the
-              environment.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="fas fa-hands-helping"></i>
-            </div>
-            <h4>Community Engagement</h4>
-            <p>
-              Empowering local communities to lead their own development
-              initiatives.
-              
-            </p>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="fas fa-lightbulb"></i>
-            </div>
-            <h4>Innovation</h4>
-            <p>
-              Implementing creative solutions to address rural development
-              challenges.
-            </p>
-          </div>
-        </div>
-      </div>
+      </div>      
     </div>
   </div>
   {% block graph %}
-  <div
-    class="flourish-embed flourish-hierarchy" style="display: flex;width: 100%;background-color: aquamarine;border-radius: 10px;margin-bottom: 100px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);">
-      <img src="../../static/main/images/indian_rs.png" alt="money_image" style="width: 50% ; padding: 10px; height: 100%;vertical-align: middle;">
-      <div class="info" style="width: 50%;padding: 10px;display: flex;flex-direction: column;line-height: max-content;align-items: left;justify-content: center;">
-        <h3 class="head">Average Monthly Per Capita Consumption Expenditure (MPCE) by; </h3>
-        <p>✓ State/UT and All-India; </p>
-        <p>✓ Fractile classes of MPCE; </p>
-        <p>✓ Item category of consumption; </p>
-        <p>✓ Household Type; </p>
-        <p>✓ Social Group </p>
-        <h3 class="head">Average Monthly Per Capita Quantity Consumption of selected items for; </h3>
-        <p>✓ State/UT and All-India; </p>
-        <p>✓ Fractile classes of MPCE; </p>
-        <p>✓ Item category.</p>
-      </div>
+  <div class="flourish-embed" style="background-color: aquamarine;border-radius: 10px;box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);">
+    <h2 class="flurine" style="margin-top: 0;">Indicators Compiled</h2>
+    <div class="flourish-embed flourish-hierarchy" style="display: flex;width: 100%;margin-bottom: 100px;margin-top: 0; ">
+        <img src="../../static/main/images/indian_rs.png" alt="money_image" style="width: 40% ;vertical-align: top;padding: 0 10px;padding-bottom: 20px;padding-left: 40px;">
+        <div class="info" style="width: 60%;padding: 10px;display: flex;flex-direction: column;line-height: max-content;align-items: left;justify-content: center;padding: 0 auto;padding-left: 40px;">
+          <h5 class="head" style="font-weight: 600;">Average Monthly Per Capita Consumption Expenditure (MPCE) by: </h5>
+          <p>✓ State/UT and All-India </p>
+          <p>✓ Fractile classes of MPCE </p>
+          <p>✓ Item category of consumption </p>
+          <p>✓ Household Type </p>
+          <p>✓ Social Group </p>
+          <h5 class="head" style="font-weight: 600;">Average Monthly Per Capita Quantity Consumption of selected items for: </h5>
+          <p>✓ State/UT and All-India </p>
+          <p>✓ Fractile classes of MPCE </p>
+          <p>✓ Item category</p>
+        </div>
+    </div>
   </div>
 </div>
 {% endblock %} {% endblock %}
